@@ -13,9 +13,12 @@
 
 <body>
 
+    <main>
+        @yield('content')
+    </main>
 
-
-    @livewireScripts
+    @include('layouts.scripts')
+    @stack('scripts')
 </body>
 
 </html>
