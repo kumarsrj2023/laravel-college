@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckUserRole;
 use App\Livewire\Admin\Index;
@@ -21,5 +21,5 @@ Route::post('savelogin', [UserController::class, 'login'])->name('user.login');
 Route::post('saveregister', [UserController::class, 'register'])->name('user.register');
 
 Route::middleware('checkRole:admin')->group(function(){
-    Route::resource('admin/student', StudentController::class);
+    Route::resource('dashboard/school', SchoolController::class);
 });
